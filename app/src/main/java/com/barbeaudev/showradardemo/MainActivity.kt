@@ -53,6 +53,16 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+        // BenchMap config as of July 31, 2019
+        double_alt_float.setOnClickListener{ view ->
+            val intent = Intent("com.google.android.radar.SHOW_RADAR")
+            intent.putExtra("latitude", 28.2537888)
+            intent.putExtra("longitude", -82.1331008)
+            intent.putExtra("altitude", 20.3f)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
